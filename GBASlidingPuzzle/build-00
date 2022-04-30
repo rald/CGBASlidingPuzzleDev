@@ -1,0 +1,1 @@
+arm-none-eabi-gcc crt0.s $* -mcpu=arm7tdmi -nostartfiles -Tlnkscript

@@ -1,0 +1,1 @@
+arm-none-eabi-objcopy -O binary $1.out $1.fixme.gba
