@@ -163,7 +163,7 @@ int main() {
   REG_DISPLAYCONTROL = VIDEOMODE_3 | BGMODE_2;
 
   uint16 delay=1000;
-  int s=16;
+  int s=40;
   volatile uint16 b[s*s];
   uint16 seed=0;
   int x=0,y=0;
@@ -184,12 +184,15 @@ int main() {
   vsync();
   dbmp(SCREEN,image_pixels,image_width,image_height,0,(SCREEN_W-image_width)/2,(SCREEN_H-image_height)/2,255);
 
+
   vsync();
+/*
   for(int j=0;j<160/s;j++) {
     for(int i=0;i<240/s;i++) {
-      drect(SCREEN,i*s,j*s,s,s,clr(12));
+      drect(SCREEN,i*s,j*s,s,s,clr(0));
     }  
   }
+*/
 
   x=rand()%(240/s)*s;
   y=rand()%(160/s)*s;
