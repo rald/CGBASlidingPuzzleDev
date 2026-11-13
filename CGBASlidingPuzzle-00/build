@@ -1,0 +1,2 @@
+arm-none-eabi-gcc crt0.s $* -o game.out -mcpu=arm7tdmi -nostartfiles -Tlnkscript --specs=nosys.specs && ./objcopy game && ./fix game.gba game.fixme.gba
+
