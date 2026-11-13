@@ -227,31 +227,26 @@ int main() {
       case 3: pd=2; break;
     }
 
-    x+=xi;
+ 	x+=xi;
     y+=yi;
 
     vsync();
     bget(b,x,y,s,s);
 
-    while(x!=px || y!=py) {
+    vsync();
+    frect(SCREEN,x,y,s,s,clr(0));
 
-      vsync();
-      frect(SCREEN,x,y,s,s,clr(0));
+    x=px;
+    y=py;
 
-      x+=sgn(px-x);
-      y+=sgn(py-y);
+    vsync();
+    bput(b,x,y,s,s);      
 
-      vsync();
-      bput(b,x,y,s,s);      
-
-      for(uint16 i=0;i<delay;i++);
-
-    }
+    for(uint16 i=0;i<delay;i++);
 
     x+=xi;
     y+=yi;
- 
-    
+      
   }
   
   return 0;
